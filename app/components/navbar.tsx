@@ -16,6 +16,7 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { v4 as uuidv4 } from 'uuid';
 
+
 const Navbar = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalType, setModalType] = useState<'income' | 'expense' | null>(null);
@@ -82,22 +83,12 @@ const Navbar = () => {
     };
 
     return (
-        <div className="relative bg-stone-200 h-20 flex items-center justify-center">
+        <div className="relative h-14 flex items-center justify-center">
 
             <div className={`absolute inset-0 ${isModalOpen ? 'blur-sm' : ''}`}>
-                <div className="bg-stone-200 h-20 flex items-center justify-center space-x-8">
-                    <button
-                        className="bg-gray-100 rounded-lg p-2 border border-gray-600 text-black"
-                        onClick={() => openModal('income')}
-                    >
-                        ADD INCOME
-                    </button>
-                    <button
-                        className="bg-gray-100 rounded-lg p-2 border border-gray-600 text-black"
-                        onClick={() => openModal('expense')}
-                    >
-                        ADD EXPENSE
-                    </button>
+                <div className="bg-slate-200 flex items-center justify-center space-x-8 py-2">
+                    <Button variant="secondary" onClick={() => openModal('income')}>Add Income</Button>
+                    <Button variant="secondary" onClick={() => openModal('expense')}>Add Expense</Button>
                 </div>
             </div>
 
