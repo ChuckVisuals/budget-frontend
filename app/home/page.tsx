@@ -7,8 +7,10 @@ export default function Home() {
     const mock = { income: 1000, amount: 1000 };
     return (
 
-        <div className="bg-white h-screen w-screen overflow-hidden relative">
+        <div className="relative bg-white h-screen w-screen overflow-hidden">
+
             <Navbar />
+
 
             {/* <div className="mt-6 ml-4">
                 <WideCard />
@@ -23,7 +25,6 @@ export default function Home() {
             <div className="mt-6 ml-4">
                 <WideCard />
             </div>
-
         </div>
     )
 }
