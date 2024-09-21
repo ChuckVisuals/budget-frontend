@@ -45,7 +45,7 @@ const Navbar = () => {
         resolver: zodResolver(formSchema),
         defaultValues: {
             source: "",
-            income: "",
+            income: 0,
         },
     })
 
