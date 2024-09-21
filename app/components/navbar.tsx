@@ -19,7 +19,7 @@ import { v4 as uuidv4 } from 'uuid';
 const Navbar = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalType, setModalType] = useState<'income' | 'expense' | null>(null);
-    const [uid, setUid] = useState<string | null>(null);
+    const [user_id, setUid] = useState<string | null>(null);
 
     useEffect(() => {
         // Check if UID exists in localStorage
@@ -49,9 +49,9 @@ const Navbar = () => {
 
     // 2. Define a submit handler.
     const onSubmit = async (values: z.infer<typeof formSchema>) => {
-        console.log(uid)
+        console.log(user_id)
         console.log(values)
-        const valuesWithUid = { ...values, uid };
+        const valuesWithUid = { ...values, user_id };
         console.log(valuesWithUid);
 
         try {
