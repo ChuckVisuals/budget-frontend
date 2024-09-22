@@ -9,8 +9,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 export default function Home() {
 
-    const [incomeData, setIncomeData] = useState([{}]);
-    const [expenseData, setExpenseData] = useState([{}]);
+    const [incomeData, setIncomeData] = useState([{ source: '', amount: 0 }]);
+    const [expenseData, setExpenseData] = useState([{ source: '', amount: 0 }]);
     const [totalIncome, setTotalIncome] = useState(0);
     const [totalExpense, setTotalExpense] = useState(0);
     const [progress, setProgress] = React.useState(13)
