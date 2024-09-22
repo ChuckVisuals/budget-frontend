@@ -1,9 +1,16 @@
 import React from 'react';
 import House from '../icons/house';
 
-//Clicks on card to enter income data or etc
+// Define the interface for the prop object
+interface CardProps {
+    prop: {
+        source: string;
+        amount: number;
+    };
+}
 
-const Card = ({ prop }) => {
+// Clicks on card to enter income data or etc
+const Card: React.FC<CardProps> = ({ prop }) => {
     const { source, amount } = prop;
 
     return (
