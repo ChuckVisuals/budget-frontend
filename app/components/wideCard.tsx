@@ -2,21 +2,21 @@ import React from 'react';
 import House from '../icons/house';
 import Icon from '../icons/info';
 
-const wideCard = () => {
+const wideCard = ({ totalIncome, totalExpense }) => {
 
     const mockData = [
-        { name: 'Amount', data: '$10000' },
-        { name: 'Monthly Repayment', data: '$21423' },
-        { name: 'Estimated Interest', data: '10% - 220%' },
-        { name: 'Estimated Interest', data: '10% - 220%' },
+        { name: 'Total Income', data: `$${totalIncome}` },
+        { name: 'Total Expense', data: `$${totalExpense}` },
+        { name: 'DUmmy', data: '10% - 220%' },
+        { name: 'DUmmy2', data: '10% - 220%' },
 
     ];
 
     return (
-        <div className="relative py-2 px-4 bg-slate-50 border border-gray-600 w-[896px] h-48 rounded-lg shadow-lg">
+        <div className="relative py-2 px-4 bg-slate-50 border border-gray-200 w-[896px] h-48 rounded-lg shadow-lg">
             <div className="flex items-center space-x-2">
                 <House />
-                <h2 className="text-gray-500">Mortgage Estimates</h2>
+                <h2 className="text-gray-500">Budget Summary</h2>
             </div>
 
             <hr className="mt-4" />

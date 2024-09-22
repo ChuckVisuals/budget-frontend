@@ -72,6 +72,7 @@ const Navbar = () => {
             console.log('Success:', data);
             setIsModalOpen(false); // Close the modal after form submission
             form.reset(); // Clear the form
+            window.location.reload(); // Reload the page to fetch the updated data
         } catch (error) {
             console.error('Error:', error);
         }
@@ -85,7 +86,7 @@ const Navbar = () => {
     return (
         <div className="relative h-14 flex items-center justify-center">
 
-            <div className={`absolute inset-0 ${isModalOpen ? 'blur-sm' : ''}`}>
+            <div className="absolute inset-0">
                 <div className="bg-slate-200 flex items-center justify-center space-x-8 py-2">
                     <Button variant="secondary" onClick={() => openModal('income')}>Add Income</Button>
                     <Button variant="secondary" onClick={() => openModal('expense')}>Add Expense</Button>
@@ -93,7 +94,7 @@ const Navbar = () => {
             </div>
 
             {isModalOpen && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-20">
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-20">
                     <div className="bg-white p-8 rounded-lg shadow-lg">
                         <Form {...form}>
                             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
