@@ -5,6 +5,7 @@ import Card from "../components/card";
 import WideCard from "../components/wideCard";
 import Navbar from "../components/navbar";
 import { Progress } from "@/components/ui/progress"
+import { v4 as uuidv4 } from 'uuid';
 
 export default function Home() {
 
