@@ -2,7 +2,13 @@ import React from 'react';
 import House from '../icons/house';
 import Icon from '../icons/info';
 
-const wideCard = ({ totalIncome, totalExpense }) => {
+// Define the interface for the props
+interface WideCardProps {
+    totalIncome: number;
+    totalExpense: number;
+}
+
+const wideCard: React.FC<WideCardProps> = ({ totalIncome, totalExpense }) => {
 
     const mockData = [
         { name: 'Total Income', data: `$${totalIncome}` },
